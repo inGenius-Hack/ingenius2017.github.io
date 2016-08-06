@@ -31,6 +31,12 @@ h2 {
 h3 {
   font-size: 18px;
 }
+.larger{
+  font-size:20px;
+}
+.smaller{
+  font-size: 18px;
+}
 .js .to-animate,
 .js .to-animate-2,
 .js .to-animate-3,
@@ -84,7 +90,9 @@ h3 {
   background-attachment: fixed;
 }
 
-
+.largerx{
+  font-size: 30px;
+}
 .parallax,
 .parallax h1,
 .parallax h2,
@@ -372,7 +380,9 @@ section {
   background-image: url(../images/about-bg.jpg);
   padding: 60px 0;
 }
-
+.top-30{
+  margin-top:30px;
+}
 #about-us h2 {
   margin-top: 0;
   color: #fff;
@@ -489,10 +499,28 @@ section {
   -webkit-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
 }
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
 
 #portfolio .folio-item:hover .folio-image {
-  -webkit-transform: scale(1.5) rotate(-15deg);
-  transform: scale(1.5) rotate(-15deg);
+  -webkit-transform:  ;
+  transform:  ;
 }
 
 .folio-image img {
