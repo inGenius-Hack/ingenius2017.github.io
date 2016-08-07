@@ -6,6 +6,14 @@ jQuery(function($) {
 		preloader.remove();
 	});
 
+	$(window).on('blur', function() { 
+		$("title").html("Come Back!");
+	});
+
+	$(window).on('focus', function() { 
+		$("title").html("inGenius 2016");
+	});
+
 	//#main-slider
 	var slideHeight = $(window).height();
 	$('#home-slider .item').css('height',slideHeight);
