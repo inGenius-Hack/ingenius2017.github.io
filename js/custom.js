@@ -14,7 +14,7 @@ $(function() {
 	// Countdown
 	$('.countdown').downCount({
 		date: '08/08/2016 00:00:00',
-		offset: +10
+		offset: +5.5
 	});			
     
 });
