@@ -18,16 +18,7 @@ body {
   color: #666;
   background-color: #fff;
 }
-.top-60{
-  margin-top: 60px;
-}
-@media only screen and (max-width: 768px) {
-  .mobilelogo{
-    margin-left:125px;
-  }
-  
 
-}
 h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
@@ -61,12 +52,6 @@ h3 {
   display: inline-block;
   zoom: 1;
   *display: inline;
-}
-.largerxx{
-  font-size:25px;
-}
-.smallerxx{
-  font-size:16px;
 }
 #fh5co-services,
 #fh5co-testimony,
@@ -162,9 +147,7 @@ a:hover {
   text-decoration: none;
   outline: none
 }
-.lesspad{
-  padding: 0px 0;
-}
+
 section {
   padding: 90px 0;
 }
@@ -806,9 +789,7 @@ section {
   border-radius: 50%; 
   position: relative;
 }
-.fa-heart{
-  color:#017fb5;
-}
+
 .twitter-icon .fa-twitter:after {
   position: absolute;
   content: "";
