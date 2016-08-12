@@ -158,8 +158,8 @@ section {
 @media only screen and (max-width: 768px) {
   .mainlogo{
     width:125px;
-    margin-left: 150px;
-    
+    margin-left: 125px;
+
   }
 }
 .preloader {
