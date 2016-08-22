@@ -68,8 +68,11 @@ h6{
 }
 
 /* Header  */
-.top-90{
+.top-60{
 	margin-top:90px;
+}
+.top-30{
+	margin-top:30px;
 }
 #header{
 }
@@ -329,7 +332,9 @@ box-shadow: none !important; }
 		ul.countdown li p{
 			padding:15px 0;
 		}
-
+.mobimg{
+	width:50%;
+}
 /* Contact Style Starts */
 
 	#contact h3, .address, #contact-form .form-group{
