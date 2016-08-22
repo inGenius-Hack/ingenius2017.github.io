@@ -307,7 +307,11 @@ box-shadow: none !important; }
 }
 
 
-
+@media only screen and (max-width: 768px) {
+	.mobimg{
+	width:50%;
+}
+}
 @media (max-width: 767px) {
 
 /* Countdown Style Starts */
@@ -332,9 +336,7 @@ box-shadow: none !important; }
 		ul.countdown li p{
 			padding:15px 0;
 		}
-.mobimg{
-	width:50%;
-}
+
 /* Contact Style Starts */
 
 	#contact h3, .address, #contact-form .form-group{
