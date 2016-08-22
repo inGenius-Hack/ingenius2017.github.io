@@ -312,6 +312,22 @@ box-shadow: none !important; }
 	width:50%;
 }
 }
+.divider{
+    position:relative;
+    left:50%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid white;
+    height:100px;
+}
+.btn-xl {
+    padding: 18px 28px;
+    font-size: 18px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 0px;
+       -moz-border-radius: 0px;
+            border-radius: 0px;
+}
 @media (max-width: 767px) {
 
 /* Countdown Style Starts */
