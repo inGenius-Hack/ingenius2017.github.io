@@ -37,6 +37,10 @@ h3 {
 .smaller{
   font-size: 18px;
 }
+.imagelo{
+    display: block;
+    margin: 0 auto;
+}
 .js .to-animate,
 .js .to-animate-2,
 .js .to-animate-3,
@@ -45,13 +49,7 @@ h3 {
 }
 .partner-logo {
   margin-bottom: 30px;
-  float: left;
-  width: 100%;
-  vertical-align: middle;
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
+ 
 }
 #fh5co-services,
 #fh5co-testimony,
