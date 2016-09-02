@@ -18,6 +18,7 @@ body {
   color: #666;
   background-color: #fff;
 }
+
 .xxx{
   font-size: 40px;
 }
@@ -30,6 +31,7 @@ body {
 .top-15{
   margin-top: 15px;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
@@ -48,10 +50,12 @@ h3 {
 .smaller{
   font-size: 18px;
 }
+
 .imagelo{
     display: block;
     margin: 0 auto;
 }
+
 .js .to-animate,
 .js .to-animate-2,
 .js .to-animate-3,
@@ -60,7 +64,7 @@ h3 {
 }
 .partner-logo {
   margin-bottom: 30px;
- 
+
 }
 #fh5co-services,
 #fh5co-testimony,
@@ -164,6 +168,7 @@ section {
 .heading {
   padding-bottom:90px;
 }
+
 @media only screen and (max-width: 768px) {
   .mainlogo{
     width:125px;
@@ -171,6 +176,7 @@ section {
 
   }
 }
+
 .preloader {
   position: fixed;
   top: 0;
