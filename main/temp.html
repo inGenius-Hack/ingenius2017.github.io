@@ -24,8 +24,16 @@
 
 
 	<style>
+
+		html{
+			background-color: #000;
+		}
 		body{
 			overflow: hidden;
+			background-color: #000 !important;
+			animation: bg-transitions 5s infinite alternate;
+		  -moz-animation: bg-transitions 5s infinite alternate;
+		  -webkit-animation: bg-transitions 5s infinite alternate;
 			/*height: 120vh;*/
 		}
 
@@ -83,6 +91,44 @@
 		}
 
 
+		.slanted {
+			background: #1C0C2B;
+			box-sizing: border-box;
+			height: 40vh;
+			width: 100%;
+			position: relative;
+			padding: 20px;
+		}
+
+		.slanted:before {
+			content: "";
+			background: #1C0C2B;
+			height: 40px;
+			transform: skewY(2deg);
+			position: absolute;
+			left: 0;
+			right: 0;
+			z-index: -1;
+		}
+
+		.slanted:after {
+			content: "";
+			background: #1C0C2B;
+			height: 80px;
+			transform: skewY(-5deg);
+			position: absolute;
+			left: 0;
+			right: 0;
+			z-index: -1;
+		}
+
+		.slanted:before{    
+			top: -20px;    
+		}
+
+		.slanted:after {
+			bottom: -30px;
+		}
 	</style>
 
 	<style>
@@ -138,7 +184,7 @@
 		</center>
 		<h2 style="color : #fff;"> <span style="font-weight: 300">September</span><strong> 23 | 24</strong></h2>
 	</div>
-	<div class="uk-position-center-right uk-position-medium">
+	<div class="uk-position-center-right uk-position-medium" style="position: fixed !important; z-index: +1;">
         <ul class="uk-dotnav uk-dotnav-vertical">
             <li class="uk-active" title="Home" uk-tooltip="pos: left"><a href="#home" uk-scroll>Item 1</a></li>
             <li title="IEEE Compsoc" uk-tooltip="pos: left"><a href="#IEEE" uk-scroll>Item 2</a></li>
@@ -152,8 +198,30 @@
     </div>
     </section>
 
-    <section id="IEEE">
-    	<div style="height: 100vh; width: 100vw; background-color: #f0f;"></div>
+    <section id="IEEE" style="min-height: 100vh; width: 100vw; background-color: rgba(20, 2, 28, 0.9);">
+    	<div class="row container">
+    		<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
+    			<h3 style="color:#B88FC2;"><strong>&lt;about&gt;</strong></h3>
+    		</div>
+    		<div class="col-sm-12">
+    			<div class="row container">
+    				<div class="col-sm-8 uk-padding-large uk-padding-remove-vertical">
+	    				<p style="color:#FFBA4C; letter-spacing: 2px; font-weight: 200 !important; font-size: 14px;"><i>
+	    					The Association for Computing Machinery is an international learned society for computing. It was founded in 1947 and is the world's largest scientific and educational computing society. It is a not-for-profit professional membership group. A Student chapter serves as a gateway to forums, panel discussions, and symposia that further a student's professional development. Preparation and presentation of technical reports and papers and cooperative efforts on research projects allow students to test their technical expertise
+	    				</i></p>
+	    				<p style="color:#fff; letter-spacing: 2px; font-weight: 300 !important; font-size: 15px;">
+	    					PESIT South ACM Student Chapter was started in 2007 by the Computer Science Department of PESIT South Campus. We also organise workshops, seminars and a couple of amazing events like inGenius (annual) and the Pursuit (bi-annual Online Treasure Hunt)!
+	    				</p>
+    				</div>
+    				<div class="col-sm-4 uk-padding-large">
+    					<img class="img img-responsive uk-position-center" src="images/compsoc.png">
+    				</div>
+    			</div>
+    		</div>
+ 			<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
+    			<h3 style="color:#B88FC2;"><strong>&lt;/about&gt;</strong></h3>
+    		</div>   		
+    	</div>
     </section>
 
 
