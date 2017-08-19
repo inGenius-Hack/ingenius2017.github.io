@@ -13,6 +13,10 @@
 
   	<!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
+   <link rel ='stylesheet' href = 'css/animate.css'>
+   <link rel ='stylesheet' href = 'css/font-awesome.min.css'> 
+
+	
 
 <!-- jQuery is required -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,156 +25,6 @@
 <!-- UIkit JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
-
-
-	<style>
-
-		html{
-			background-color: #000;
-		}
-		body{
-			overflow: hidden;
-			background-color: #000 !important;
-			animation: bg-transitions 5s infinite alternate;
-		  -moz-animation: bg-transitions 5s infinite alternate;
-		  -webkit-animation: bg-transitions 5s infinite alternate;
-			/*height: 120vh;*/
-		}
-
-		.uk-dotnav>*>*{
-			background-color: transparent;
-			border: 2px solid #fff;
-			opacity: 0.5;
-			width: 12px;
-			height: 12px;
-		}
-		.uk-dotnav>.uk-active>*{
-			background-color: #fff;
-			opacity: 0.7;
-			transition: 1s;
-			width: 14px;
-			height: 14px;
-		}
-		#particles-js {
-		  /*position: absolute;*/
-		  width: 100%;
-		  height: 105vh;
-		  animation: bg-transitions 5s infinite alternate;
-		  -moz-animation: bg-transitions 5s infinite alternate;
-		  -webkit-animation: bg-transitions 5s infinite alternate;
-		  background-image: url("");
-		  background-repeat: no-repeat;
-		  background-size: cover;
-		  background-position: 50% 50%;
-		}
-		.uk-tooltip{
-			background-color: transparent;
-			font-size: 14px;
-			letter-spacing: 1px;
-		}
-		#logo-area{
-			position: absolute;
-			top: 20%;
-			z-index: +1;
-		}
-
-
-		@-webkit-keyframes bg-transitions{
-			0% {background-color: #0D0620;}
-			20% {background-color: #1C0C2B;}
-			40% {background-color: #041024;}
-			80% {background-color: #020006;}
-			100% {background-color: #050309;}
-		}
-		@keyframes bg-transitions{
-			0% {background-color: #0D0620;}
-			20% {background-color: #1C0C2B;}
-			40% {background-color: #041024;}
-			80% {background-color: #020006;}
-			100% {background-color: #050309;}
-		}
-
-
-		.slanted {
-			background: #1C0C2B;
-			box-sizing: border-box;
-			height: 40vh;
-			width: 100%;
-			position: relative;
-			padding: 20px;
-		}
-
-		.slanted:before {
-			content: "";
-			background: #1C0C2B;
-			height: 40px;
-			transform: skewY(2deg);
-			position: absolute;
-			left: 0;
-			right: 0;
-			z-index: -1;
-		}
-
-		.slanted:after {
-			content: "";
-			background: #1C0C2B;
-			height: 80px;
-			transform: skewY(-5deg);
-			position: absolute;
-			left: 0;
-			right: 0;
-			z-index: -1;
-		}
-
-		.slanted:before{    
-			top: -20px;    
-		}
-
-		.slanted:after {
-			bottom: -30px;
-		}
-	</style>
-
-	<style>
-
-		body{
-		    color:#fff;
-		    font:18px/28px 'Raleway', sans-serif;
-		    font-weight:300;
-		}
-
-		/* Main Heading Style Starts */
-
-		    .main-head{
-		        text-align:center;
-		        padding:0 0 40px;
-		    }
-	        .main-head h2, .main-head p{
-	        }
-	        .main-head h2{
-	            padding:0 0 20px;
-	        }
-	        .main-head p{
-	            font-size:24px;
-	            line-height:36px;
-	        }
-
-
-		@media (max-width: 760px) {
-			body{
-				overflow: scroll;
-			}
-		}
-
-		.header-overlay h1{
-		    margin-top:100px;
-		    margin-bottom: 100px;
-		}
-		</style>
-
-
-
-
 
 </head>
 <body>
@@ -198,40 +52,184 @@
     </div>
     </section>
 
-    <section id="IEEE" style="min-height: 100vh; width: 100vw; background-color: rgba(20, 2, 28, 0.9);">
+
+
+    <div class="bulblogo hidden" style="position: fixed; top: 10px; left: 15px;"> <img class="img img-responsive" style="height:60px;" src="images/bulb.png"></div>
+
+    <script>
+      $(document).ready(function(){
+        $(window).scroll(function(){
+          var scrollPos = $(window).scrollTop();
+          if(scrollPos >= 600){
+            $(".bulblogo").addClass("large-nav").promise().done(function(){
+              $(".bulblogo").removeClass("hidden").addClass("fadeInLeft animated");
+            });
+          }else if(scrollPos <= 50){
+            $(".bulblogo").removeClass("large-nav").promise().done(function(){
+              $(".bulblogo").removeClass("fadeInLeft").addClass("fadeOutLeft").promise().done(function(){
+                $(".bulblogo").removeClass("fadeOutLeft").addClass("hidden");
+              });
+            });
+          }
+        });
+      });
+    </script>
+
+
+    <section id="IEEE" style="width: 100%; background-color: rgba(20, 2, 28, 0.8);" class="uk-padding-large">
     	<div class="row container">
     		<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
-    			<h3 style="color:#B88FC2;"><strong>&lt;about&gt;</strong></h3>
+    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;CompSoc&gt;</strong></h4>
     		</div>
     		<div class="col-sm-12">
     			<div class="row container">
-    				<div class="col-sm-8 uk-padding-large uk-padding-remove-vertical">
-	    				<p style="color:#FFBA4C; letter-spacing: 2px; font-weight: 200 !important; font-size: 14px;"><i>
-	    					The Association for Computing Machinery is an international learned society for computing. It was founded in 1947 and is the world's largest scientific and educational computing society. It is a not-for-profit professional membership group. A Student chapter serves as a gateway to forums, panel discussions, and symposia that further a student's professional development. Preparation and presentation of technical reports and papers and cooperative efforts on research projects allow students to test their technical expertise
-	    				</i></p>
-	    				<p style="color:#fff; letter-spacing: 2px; font-weight: 300 !important; font-size: 15px;">
+    				<div class="col-md-5 uk-margin-large pull-right">
+    					<center><img class="img img-responsive" src="images/compsoc.png" uk-scrollspy="cls:uk-animation-fade"></center>
+    				</div>
+    				<div class="col-md-7 uk-padding-large uk-padding-remove-vertical pull-left">
+	    				<p style="color:#FFBA4C; letter-spacing: 3px; font-weight: 300 !important; font-size: 24px; opacity: 0.9;"><i>
 	    					PESIT South ACM Student Chapter was started in 2007 by the Computer Science Department of PESIT South Campus. We also organise workshops, seminars and a couple of amazing events like inGenius (annual) and the Pursuit (bi-annual Online Treasure Hunt)!
-	    				</p>
+	    				</i></p>
+	    				<!-- <p style="color:#fff; letter-spacing: 3px; font-weight: 300 !important; font-size: 15px;">
+	    					
+	    				</p> -->
     				</div>
-    				<div class="col-sm-4 uk-padding-large">
-    					<img class="img img-responsive uk-position-center" src="images/compsoc.png">
-    				</div>
+    				
     			</div>
     		</div>
  			<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
-    			<h3 style="color:#B88FC2;"><strong>&lt;/about&gt;</strong></h3>
+    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;/CompSoc&gt;</strong></h4>
     		</div>   		
     	</div>
     </section>
 
 
-    <section id="inspiration">
-    	<div style="height: 100vh; width: 100vw; background-color: #f0fc32;"></div>
+    <section id="inspiration" style="background-color: #000;"  class="uk-padding-large">
+    	<div class="row container">
+    		<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
+    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;about-us&gt;</strong></h4>
+    		</div> 
+
+    		<div class="col-sm-12">
+    			<div class="row container">
+    				<div class="col-md-6 uk-padding-large uk-padding-remove-vertical">
+	    				<p style="color:#2d9687; letter-spacing: 3px; font-weight: 300 !important; font-size: 24px; opacity: 0.9;"><i>
+	    					inGenius, the flagship event of PESIT South ACM, is an annual 24-hour hackathon.<br><br>
+	    					After three successful iterations, inGenius 2015 is back! This time around, our theme is Open Hack. The future is data-driven. So get behind the wheel &amp; hack it out on the 2nd &amp; 3rd of October, 2015.
+	    				</i></p>
+	    				<!-- <p style="color:#fff; letter-spacing: 2px; font-weight: 300 !important; font-size: 15px;">
+	    					PESIT South ACM Student Chapter was started in 2007 by the Computer Science Department of PESIT South Campus. We also organise workshops, seminars and a couple of amazing events like inGenius (annual) and the Pursuit (bi-annual Online Treasure Hunt)!
+	    				</p> -->
+    				</div>
+    				
+    				<div id ="svg-logos" class="col-md-6 uk-margin-large uk-margin-remove-vertical">
+
+	    				<div class="row uk-margin uk-margin-remove-horizontal">
+	    				<div class="uk-child-width-expand@s uk-text-center" uk-grid>
+						    <div>
+						        <!-- <svg width="100" height="100">
+									<circle cx="45" cy="45" r="40" stroke="green" stroke-width="4" />
+									<foreignobject x="35" y="30"><i class="fa fa-calendar" x="15" y="15"></i></foreignobject>
+								</svg> -->
+								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+									<!-- <path class="darker" d="M 80.889194,41.80541 C 80.889194,63.45198 63.341174,81 41.694594,81 20.048024,81 2.5,63.45198 2.5,41.80541 2.5,20.158827 20.048024,2.61081 41.694594,2.61081 c 21.64658,0 39.1946,17.548017 39.1946,39.1946 z"/> -->
+
+									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
+
+									<foreignobject x="60" y="60"><i class="fa fa-calendar hidden-logo"></i></foreignobject>
+								</svg>
+						    </div> 
+						    <div>
+						        <!-- <div class="icon-container uk-padding"><i class="fa fa-clock-o"></i></div> -->
+
+						        <!-- <svg width="100" height="100">
+									<circle cx="40" cy="40" r="40" stroke="green" stroke-width="4" />
+									<i class="fa fa-clock-o" x="15" y="15"></i>
+								</svg> -->
+
+								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
+									<foreignobject x="60" y="60"><i class="fa fa-clock-o hidden-logo" x="15" y="15"></i></foreignobject>
+								</svg>
+								
+
+						    </div>
+						    <div>
+						        <!-- <div class="icon-container uk-padding"><i class="fa fa-users"></i></div> -->
+						        <!-- <svg width="100" height="100">
+									<circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" />
+									<i class="fa fa-calendar" x="15" y="15"></i>
+								</svg> -->
+								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
+
+									<foreignobject x="60" y="60"><i class="fa fa-users hidden-logo" x="15" y="15"></i></foreignobject>
+
+								</svg>
+
+						    </div>
+						</div>
+						</div>
+						<div class="row uk-margin uk-margin-remove-horizontal">
+						<div class="uk-child-width-expand@s uk-text-center" uk-grid>
+						    <div>
+						        <!-- <div class="icon-container uk-padding"><i class="fa fa-calendar"></i></div> -->
+
+						        <!-- <svg width="100" height="100">
+									<circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" />
+									<i class="fa fa-calendar" x="15" y="15"></i>
+								</svg> -->
+
+								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
+									<foreignobject x="60" y="60"><i class="fa fa-calendar hidden-logo" x="15" y="15"></i></foreignobject>
+								</svg>
+
+						    </div>
+						    <div>
+						        <!-- <div class="icon-container uk-padding"><i class="fa fa-trophy"></i></div> -->
+						        <!-- <svg width="100" height="100">
+									<circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" />
+									<i class="fa fa-calendar" x="15" y="15"></i>
+								</svg> -->
+
+								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
+									<foreignobject x="60" y="60"><i class="fa fa-trophy hidden-logo" x="15" y="15"></i></foreignobject>
+								</svg>
+
+						    </div>
+						    <div>
+						        <!-- <div class="icon-container uk-padding"><i class="fa fa-calendar"></i></div> -->
+						        <!-- <svg width="100" height="100">
+									<circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" />
+									<i class="fa fa-calendar" x="15" y="15"></i>
+								</svg> -->
+
+								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
+									<foreignobject x="60" y="60"><i class="fa fa-calendar hidden-logo" x="15" y="15"></i></foreignobject>
+								</svg>
+
+						    </div>
+						</div>
+						</div>
+
+    				</div>
+
+    			</div>
+    		</div>
+
+
+    		<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
+    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;/about-us&gt;</strong></h4>
+    		</div> 
+    	</div>
     </section>
 
 
     <section id="registrations">
-    	<div style="height: 100vh; width: 100vw;background-color: #23fcca;"></div>
+    	<div style="height: 100vh; width: 100vw;"></div>
     </section>
 
 
@@ -356,5 +354,30 @@
 	  "retina_detect": true
 	});
 	</script>
+
+	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+       $("html").niceScroll({
+        cursorcolor:"#AB0037",
+        cursorwidth:"12px",
+        cursoropacitymin : 1,
+        cursoropacitymax : 1,
+        zindex : +1, 
+        autohidemode : false,
+        cursorfixedheight : 80,
+        cursorborderradius : "10px",
+        cursorborder: "1px solid #0A0924",
+        scrollspeed : 150,
+        mousescrollstep: 80
+      });
+    });
+
+
+	</script>
+
+	<script src="js/classie.js"></script>
+	<script src="js/svganimations2.js"></script>
 </body>
 </html>
