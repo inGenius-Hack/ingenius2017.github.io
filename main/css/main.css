@@ -65,6 +65,46 @@ body{
 	100% {background-color: #050309;}
 }
 
+.logo-info-container h4{
+	color : #fff !important;
+}
+
+.main-content{
+	letter-spacing: 3px; font-weight: 300 !important; font-size: 24px; opacity: 0.9;
+}
+svg text{
+	font-family: "FontAwesome";
+	color : #fff !important;
+	font-size : 20px;
+}
+
+.part-icon-cont{
+	color:#fff; 
+	position: absolute; 
+	left:0; 
+	top:22%;
+	width:100%;
+	font-size:38px !important;
+}
+
+#menu-icon{
+	display : none;
+}
+@media (max-width: 760px) {
+	/*.part-icon-cont{
+		left:73px;
+	}*/
+
+	.main-content{
+		font-size : 20px;
+	}
+	#dot-nav{
+		display: none;
+	}
+	#menu-icon{
+		display: block;
+	}
+}
 
 .line-drawing, .illustration {
 	display: none;
@@ -75,7 +115,7 @@ body{
 .line-drawing path {
 	fill: none;
 	stroke: #AB0037;
-	stroke-width: 3;
+	stroke-width: 5;
 }
 
 .hidden-logo{
@@ -122,9 +162,9 @@ body{
 	body{
 		overflow: scroll;
 	}
-	#svg-logos{
+	/*#svg-logos{
 		display: none;
-	}
+	}*/
 }
 
 .header-overlay h1{

@@ -29,6 +29,30 @@
 </head>
 <body>
 
+
+<div id="menu-icon" style="position: fixed; top:10px; right:10px; z-index: 1001 !important; display: block;"  uk-toggle="target: #offcanvas-nav-primary">
+	
+</div>
+<!-- <button class="uk-button uk-button-default uk-margin-small-right" type="button">Primary Nav</button> -->
+
+	<div class="uk-offcanvas-content">
+    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true; flip: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column" style="background-color: #000; width:100vw; z-index: -1; letter-spacing: 2px; font-size : 32px;">
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="uk-active"><a href="#">Home</a></li>
+                <li><a href="#">IEEE CompSoc</a></li>
+                <li><a href="#">About</a></li>
+<!--                 <li class="uk-nav-divider"></li> -->
+                <li><a href="#">Participate</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Registration</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+</div>
+
 	<section id="home">
 	<div id="particles-js"></div>
 
@@ -38,7 +62,7 @@
 		</center>
 		<h2 style="color : #fff;"> <span style="font-weight: 300">September</span><strong> 23 | 24</strong></h2>
 	</div>
-	<div class="uk-position-center-right uk-position-medium" style="position: fixed !important; z-index: +1;">
+	<div id = "dot-nav" class="uk-position-center-right uk-position-medium" style="position: fixed !important; z-index: +1;">
         <ul class="uk-dotnav uk-dotnav-vertical">
             <li class="uk-active" title="Home" uk-tooltip="pos: left"><a href="#home" uk-scroll>Item 1</a></li>
             <li title="IEEE Compsoc" uk-tooltip="pos: left"><a href="#IEEE" uk-scroll>Item 2</a></li>
@@ -76,18 +100,18 @@
     </script>
 
 
-    <section id="IEEE" style="width: 100%; background-color: rgba(20, 2, 28, 0.8);" class="uk-padding-large">
+    <section id="IEEE" style="width: 100%; background-color: #000; min-height: 100vh;" class="uk-padding-large">
     	<div class="row container">
     		<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
-    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;CompSoc&gt;</strong></h4>
+    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;comp-soc&gt;</strong></h4>
     		</div>
     		<div class="col-sm-12">
     			<div class="row container">
     				<div class="col-md-5 uk-margin-large pull-right">
     					<center><img class="img img-responsive" src="images/compsoc.png" uk-scrollspy="cls:uk-animation-fade"></center>
     				</div>
-    				<div class="col-md-7 uk-padding-large uk-padding-remove-vertical pull-left">
-	    				<p style="color:#FFBA4C; letter-spacing: 3px; font-weight: 300 !important; font-size: 24px; opacity: 0.9;"><i>
+    				<div class="col-md-7 uk-padding-large uk-padding-remove-vertical pull-left main-content">
+	    				<p style="color:#FFBA4C;"><i>
 	    					PESIT South ACM Student Chapter was started in 2007 by the Computer Science Department of PESIT South Campus. We also organise workshops, seminars and a couple of amazing events like inGenius (annual) and the Pursuit (bi-annual Online Treasure Hunt)!
 	    				</i></p>
 	    				<!-- <p style="color:#fff; letter-spacing: 3px; font-weight: 300 !important; font-size: 15px;">
@@ -98,13 +122,12 @@
     			</div>
     		</div>
  			<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
-    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;/CompSoc&gt;</strong></h4>
+    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;/comp-soc&gt;</strong></h4>
     		</div>   		
     	</div>
     </section>
 
-
-    <section id="inspiration" style="background-color: #000;"  class="uk-padding-large">
+    <section id="inspiration" style="background-color: #000; min-height: 100vh;"  class="uk-padding-large">
     	<div class="row container">
     		<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
     			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;about-us&gt;</strong></h4>
@@ -112,8 +135,8 @@
 
     		<div class="col-sm-12">
     			<div class="row container">
-    				<div class="col-md-6 uk-padding-large uk-padding-remove-vertical">
-	    				<p style="color:#2d9687; letter-spacing: 3px; font-weight: 300 !important; font-size: 24px; opacity: 0.9;"><i>
+    				<div class="col-md-6 uk-padding-large uk-padding-remove-vertical main-content">
+	    				<p style="color:#2d9687;"><i>
 	    					inGenius, the flagship event of PESIT South ACM, is an annual 24-hour hackathon.<br><br>
 	    					After three successful iterations, inGenius 2015 is back! This time around, our theme is Open Hack. The future is data-driven. So get behind the wheel &amp; hack it out on the 2nd &amp; 3rd of October, 2015.
 	    				</i></p>
@@ -125,94 +148,7 @@
     				<div id ="svg-logos" class="col-md-6 uk-margin-large uk-margin-remove-vertical">
 
 	    				<div class="row uk-margin uk-margin-remove-horizontal">
-	    				<div class="uk-child-width-expand@s uk-text-center" uk-grid>
-						    <div>
-						        <!-- <svg width="100" height="100">
-									<circle cx="45" cy="45" r="40" stroke="green" stroke-width="4" />
-									<foreignobject x="35" y="30"><i class="fa fa-calendar" x="15" y="15"></i></foreignobject>
-								</svg> -->
-								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-									<!-- <path class="darker" d="M 80.889194,41.80541 C 80.889194,63.45198 63.341174,81 41.694594,81 20.048024,81 2.5,63.45198 2.5,41.80541 2.5,20.158827 20.048024,2.61081 41.694594,2.61081 c 21.64658,0 39.1946,17.548017 39.1946,39.1946 z"/> -->
-
-									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
-
-									<foreignobject x="60" y="60"><i class="fa fa-calendar hidden-logo"></i></foreignobject>
-								</svg>
-						    </div> 
-						    <div>
-						        <!-- <div class="icon-container uk-padding"><i class="fa fa-clock-o"></i></div> -->
-
-						        <!-- <svg width="100" height="100">
-									<circle cx="40" cy="40" r="40" stroke="green" stroke-width="4" />
-									<i class="fa fa-clock-o" x="15" y="15"></i>
-								</svg> -->
-
-								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
-									<foreignobject x="60" y="60"><i class="fa fa-clock-o hidden-logo" x="15" y="15"></i></foreignobject>
-								</svg>
-								
-
-						    </div>
-						    <div>
-						        <!-- <div class="icon-container uk-padding"><i class="fa fa-users"></i></div> -->
-						        <!-- <svg width="100" height="100">
-									<circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" />
-									<i class="fa fa-calendar" x="15" y="15"></i>
-								</svg> -->
-								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
-
-									<foreignobject x="60" y="60"><i class="fa fa-users hidden-logo" x="15" y="15"></i></foreignobject>
-
-								</svg>
-
-						    </div>
-						</div>
-						</div>
-						<div class="row uk-margin uk-margin-remove-horizontal">
-						<div class="uk-child-width-expand@s uk-text-center" uk-grid>
-						    <div>
-						        <!-- <div class="icon-container uk-padding"><i class="fa fa-calendar"></i></div> -->
-
-						        <!-- <svg width="100" height="100">
-									<circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" />
-									<i class="fa fa-calendar" x="15" y="15"></i>
-								</svg> -->
-
-								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
-									<foreignobject x="60" y="60"><i class="fa fa-calendar hidden-logo" x="15" y="15"></i></foreignobject>
-								</svg>
-
-						    </div>
-						    <div>
-						        <!-- <div class="icon-container uk-padding"><i class="fa fa-trophy"></i></div> -->
-						        <!-- <svg width="100" height="100">
-									<circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" />
-									<i class="fa fa-calendar" x="15" y="15"></i>
-								</svg> -->
-
-								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
-									<foreignobject x="60" y="60"><i class="fa fa-trophy hidden-logo" x="15" y="15"></i></foreignobject>
-								</svg>
-
-						    </div>
-						    <div>
-						        <!-- <div class="icon-container uk-padding"><i class="fa fa-calendar"></i></div> -->
-						        <!-- <svg width="100" height="100">
-									<circle cx="20" cy="20" r="40" stroke="green" stroke-width="4" />
-									<i class="fa fa-calendar" x="15" y="15"></i>
-								</svg> -->
-
-								<svg class="line-drawing" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
-									<path class="darker" d="M130.0,70.0 Q129.7717,75.2293 129.0885,80.4189 Q127.9555,85.5291 126.3816,90.5212 Q124.3785,95.3571 121.9615,100.0 Q119.1491,104.4146 115.9627,108.5673 Q112.4264,112.4264 108.5673,115.9627 Q104.4146,119.1491 100.0,121.9615 Q95.3571,124.3785 90.5212,126.3816 Q85.5291,127.9555 80.4189,129.0885 Q75.2293,129.7717 70.0,130.0 Q64.7707,129.7717 59.5811,129.0885 Q54.4709,127.9555 49.4788,126.3816 Q44.6429,124.3785 40.0,121.9615 Q35.5854,119.1491 31.4327,115.9627 Q27.5736,112.4264 24.0373,108.5673 Q20.8509,104.4146 18.0385,100.0 Q15.6215,95.3571 13.6184,90.5212 Q12.0445,85.5291 10.9115,80.4189 Q10.2283,75.2293 10.0,70.0 Q10.2283,64.7707 10.9115,59.5811 Q12.0445,54.4709 13.6184,49.4788 Q15.6215,44.6429 18.0385,40.0 Q20.8509,35.5854 24.0373,31.4327 Q27.5736,27.5736 31.4327,24.0373 Q35.5854,20.8509 40.0,18.0385 Q44.6429,15.6215 49.4788,13.6184 Q54.4709,12.0445 59.5811,10.9115 Q64.7707,10.2283 70.0,10.0 Q75.2293,10.2283 80.4189,10.9115 Q85.5291,12.0445 90.5212,13.6184 Q95.3571,15.6215 100.0,18.0385 Q104.4146,20.8509 108.5673,24.0373 Q112.4264,27.5736 115.9627,31.4327 Q119.1491,35.5854 121.9615,40.0 Q124.3785,44.6429 126.3816,49.4788 Q127.9555,54.4709 129.0885,59.5811 Q129.7717,64.7707 130,70 z"/>
-									<foreignobject x="60" y="60"><i class="fa fa-calendar hidden-logo" x="15" y="15"></i></foreignobject>
-								</svg>
-
-						    </div>
-						</div>
+	    					<img class="img img-responsive pull-right" style="max-height: 400px !important;" src="images/bulb.png">
 						</div>
 
     				</div>
@@ -227,6 +163,99 @@
     	</div>
     </section>
 
+    <section id="participate" style="background-color:#000; min-height: 100vh;" class="uk-padding-large">
+    	<div class="row container">
+    		<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
+    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;participate&gt;</strong></h4>
+    		</div> 
+
+    		<div class="col-sm-12 container text-center uk-padding">
+    			<div class="row uk-margin-medium uk-padding uk-padding-remove-vertical">
+    				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-left">
+    					<div class="part-icon-cont">
+	    					<center><span class="part-icon fa fa-calendar"></span></center>
+	    				</div>
+    					<div id="lc-1" class="logo-container uk-margin-medium uk-margin-remove-top">
+    						
+    					</div>
+    					<div class="logo-info-container">
+    						<h4> Mark your dates for 10th - 11th Sept </h4>
+    					</div>
+    				</div>
+    				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-fade">
+    					<div class="part-icon-cont">
+	    					<center><span class="part-icon fa fa-camera-retro"></span></center>
+	    				</div>
+
+    					<div id="lc-2" class="logo-container uk-margin-medium uk-margin-remove-top">
+	    					
+    					</div>
+    					<div class="logo-info-container">
+    						<h4> Thinking big? Think bigger! Come and blow our minds. </h4>
+    					</div>
+    				</div>
+    				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-right">
+    					<div class="part-icon-cont">
+	    					<center><span class="part-icon fa fa-clock-o"></span></center>
+	    				</div>
+
+    					<div id="lc-3" class="logo-container uk-margin-medium uk-margin-remove-top">
+	    					
+    					</div>
+    					<div class="logo-info-container">
+    						<h4> The 24 hour event will feature mentors, food, games and a lot of fun. </h4>
+    					</div>
+    				</div>
+
+    			</div>
+
+    			<div class="row uk-padding uk-padding-remove-vertical">
+    				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-left">
+    					<div class="part-icon-cont">
+	    					<center><span class="part-icon fa fa-coffee"></span></center>
+	    				</div>
+
+    					<div id="lc-4" class="logo-container uk-margin-medium uk-margin-remove-top">
+	    					
+    					</div>
+    					<div class="logo-info-container">
+    						<h4> Build and register your team online, along with an abstract about your hack! </h4>
+    					</div>
+    				</div>
+    				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-fade">
+    					<div class="part-icon-cont">
+	    					<center><span class="part-icon fa fa-thumbs-o-up"></span></center>
+	    				</div>
+
+    					<div id="lc-5" class="logo-container uk-margin-medium uk-margin-remove-top">
+	    					
+    					</div>
+    					<div class="logo-info-container">
+    						<h4> Teams with the best hack ideas get shortlisted. </h4>
+    					</div>
+    				</div>
+    				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-right">
+    					<div class="part-icon-cont">
+	    					<center><span class="part-icon fa fa-ticket"></span></center>
+	    				</div>
+
+    					<div id="lc-6" class="logo-container uk-margin-medium uk-margin-remove-top">
+	    					
+    					</div>
+    					<div class="logo-info-container">
+    						<h4> Shortlisted teams collect tickets and gear up for the event! </h4>
+    					</div>
+    				</div>
+
+    			</div>
+    		</div>
+
+
+    		<div class="col-sm-12 uk-padding uk-padding-remove-bottom">
+    			<h4 style="color:#B88FC2;" uk-scrollspy="cls:uk-animation-slide-left"><strong>&lt;/participate&gt;</strong></h4>
+    		</div> 
+    	</div>
+    </section>
 
     <section id="registrations">
     	<div style="height: 100vh; width: 100vw;"></div>
@@ -243,7 +272,73 @@
     </section>
 
 
+    <script type="text/javascript" src="js/svg.min.js"></script>
+    <script>
+	  // new Vivus('my-svg', {duration: 50}, function(){
+	  // 	// alert("done");
+	  // });
 
+	  var menu = SVG('menu-icon').size(60,60);
+	  var item = menu.line(0, 10, 50, 10).move(0, 10);
+	  item.stroke({ color: '#2d9687', width: 5, linecap: 'round' });
+
+	  var item2 = menu.line(0, 25, 50, 25).move(0, 25);
+	  item2.stroke({ color: '#2d9687', width: 5, linecap: 'round' });
+
+	  var item3 = menu.line(0, 40, 50, 40).move(0,40);
+	  item3.stroke({ color: '#2d9687', width: 5, linecap: 'round' });
+
+	  var draw1 = SVG('lc-1').size(180, 180);
+	  var draw2 = SVG('lc-2').size(180, 180);
+	  var draw3 = SVG('lc-3').size(180, 180);
+	  var draw4 = SVG('lc-4').size(180, 180);
+	  var draw5 = SVG('lc-5').size(180, 180);
+	  var draw6 = SVG('lc-6').size(180, 180);
+	  // var rect1 = draw1.circle(100).move(10, 10);
+	  var rect1 = draw1.polygon('160.0,80.0 120.0,149.282 40.0,149.282 0.0,80.0 40.0,10.718 120.0,10.718').move(10,10);
+	  var rect2 = draw2.circle(150).move(10, 10);
+	  var rect3 = draw3.polygon('160.0,80.0 120.0,149.282 40.0,149.282 0.0,80.0 40.0,10.718 120.0,10.718').move(10,10);
+	  var rect4 = draw4.circle(150).move(10, 10);
+	  var rect5 = draw5.polygon('160.0,80.0 120.0,149.282 40.0,149.282 0.0,80.0 40.0,10.718 120.0,10.718').move(10,10);
+	  var rect6 = draw6.circle(150).move(10, 10);
+	  rect1.attr({
+	  	fill : "none",
+	  	stroke : "#2d9687",
+	  	'stroke-width' : 8
+	  });
+	  rect2.attr({
+	  	fill : "#2d9687",
+	  	stroke : "#2d9687",
+	  	'stroke-width' : 8
+	  });
+	  rect3.attr({
+	  	fill : "none",
+	  	stroke : "#2d9687",
+	  	'stroke-width' : 8
+	  });
+	  rect4.attr({
+	  	fill : "#2d9687",
+	  	stroke : "#2d9687",
+	  	'stroke-width' : 8
+	  });
+	  rect5.attr({
+	  	fill : "none",
+	  	stroke : "#2d9687",
+	  	'stroke-width' : 8
+	  });
+	  rect6.attr({
+	  	fill : "#2d9687",
+	  	stroke : "#2d9687",
+	  	'stroke-width' : 8
+	  });
+
+	  var text1 = draw1.text("\uf005");
+	  text1.font({
+	  	family : "FontAwesome",
+	  	size : 144
+	  });
+
+	</script>
 	<script src="js/particles.js"></script>
 	<script>
 		/* ---- particles.js config ---- */
@@ -358,21 +453,21 @@
 	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 	<script type="text/javascript">
 
-	$(document).ready(function() {
-       $("html").niceScroll({
-        cursorcolor:"#AB0037",
-        cursorwidth:"12px",
-        cursoropacitymin : 1,
-        cursoropacitymax : 1,
-        zindex : +1, 
-        autohidemode : false,
-        cursorfixedheight : 80,
-        cursorborderradius : "10px",
-        cursorborder: "1px solid #0A0924",
-        scrollspeed : 150,
-        mousescrollstep: 80
-      });
-    });
+	// $(document).ready(function() {
+ //       $("html").niceScroll({
+ //        cursorcolor:"#AB0037",
+ //        cursorwidth:"12px",
+ //        cursoropacitymin : 1,
+ //        cursoropacitymax : 1,
+ //        zindex : +1, 
+ //        autohidemode : false,
+ //        cursorfixedheight : 80,
+ //        cursorborderradius : "10px",
+ //        cursorborder: "1px solid #0A0924",
+ //        scrollspeed : 150,
+ //        mousescrollstep: 80
+ //      });
+ //    });
 
 
 	</script>
