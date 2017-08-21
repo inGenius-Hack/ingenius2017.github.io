@@ -1,41 +1,49 @@
 html{
-	background-color: #000;
+	/*background-color: #000;*/
 }
 body{
 	overflow-x: hidden;
-	background-color: #000 !important;
+	/*background-color: #000 !important;*/
 	/*animation: bg-transitions 5s infinite alternate;
   -moz-animation: bg-transitions 5s infinite alternate;
   -webkit-animation: bg-transitions 5s infinite alternate;*/
 	/*height: 120vh;*/
 }
 
-.uk-dotnav>*>*{
-	background-color: transparent;
+h3, h4{
+	font-family: 'Inconsalata', monospace !important;
+	src: local("Inconsolata"), url("http://themes.googleusercontent.com/static/fonts/inconsolata/v3/BjAYBlHtW3CJxDcjzrnZCIbN6UDyHWBl620a-IRfuBk.woff") format("woff");
+}
+.uk-dotnav>li>a{
+	/*background-color: transparent;*/
 	border: 2px solid #fff;
 	opacity: 0.5;
 	width: 12px;
 	height: 12px;
 }
-.uk-dotnav>.uk-active>*{
-	background-color: #fff;
-	opacity: 0.7;
-	transition: 1s;
-	width: 14px;
-	height: 14px;
+.uk-dotnav>.uk-active>a{
+	background-color: #2d9687;
+	opacity: 1;
+	transition: 0.5s;
+	-webkit-box-shadow: 2px -1px 26px 1px rgba(250,255,255,1);
+-moz-box-shadow: 2px -1px 26px 1px rgba(250,255,255,1);
+box-shadow: 2px -1px 26px 1px rgba(250,255,255,1);
 }
 
-section {
+.section {
 	background : transparent !important;
 }
 
-#IEEE{
-	
+#home{
+	height: 100vh;
+	width: 100vw;
 }
 #particles-js {
   position: fixed;
+  top:0;
+  left: 0;
   width: 100%;
-  height: 105vh;
+  height: 100%;
   animation: bg-transitions 6s infinite alternate;
   -moz-animation: bg-transitions 6s infinite alternate;
   -webkit-animation: bg-transitions 6s infinite alternate;
@@ -78,7 +86,8 @@ section {
 }
 
 .main-content{
-	letter-spacing: 3px; font-weight: 300 !important; font-size: 24px; opacity: 0.9;
+	letter-spacing: 2px; font-weight: 300 !important; font-size: 24px; opacity: 0.9;
+	font-family: 'Open Sans', sans-serif;
 }
 svg text{
 	font-family: "FontAwesome";
@@ -117,12 +126,12 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 64% 75%, 51% 100%, 37% 76%, 0% 75%)
 	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 .uk-accordion li{
-	border : 4px solid #AB0037;
+	border : 2px solid #2d9687;
 	padding : 20px;
 	border-radius: 2%;
 }
 .uk-accordion-title{
-	color : #2d9687;
+	color : #E2B8AB;
 	font-weight: bold;
 }
 .uk-accordion-content{
@@ -203,7 +212,7 @@ body{
 .clip-hexagon{
 	/*border: 5px solid #2d9687;*/
 	/*background-image: url("../images/1.jpg");*/
-	background-color: #1B7385;
+	background-color: #E2B8AB;
 	box-sizing: border-box;
 	display: inline-block;
 	/*-webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);*/
