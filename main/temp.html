@@ -40,17 +40,17 @@
 <!-- <button class="uk-button uk-button-default uk-margin-small-right" type="button">Primary Nav</button> -->
 
 	<div class="uk-offcanvas-content">
-    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true; flip: true">
+    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: false; flip: true">
         <div class="uk-offcanvas-bar uk-flex uk-flex-column" style="background-color: #000; width:100vw; z-index: -1; letter-spacing: 2px; font-size : 32px;">
             <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-scrollspy-nav="closest: li; scroll: true">
-                <li class="uk-active"><a href="#home">Home</a></li>
-                <li><a href="#IEEE">IEEE CompSoc</a></li>
-                <li><a href="#ingenius">About</a></li>
+                <li class="uk-active"><a href="#home" uk-scroll>Home</a></li>
+                <li><a href="#IEEE" uk-scroll>IEEE CompSoc</a></li>
+                <li><a href="#ingenius" uk-scroll>About</a></li>
 <!--                 <li class="uk-nav-divider"></li> -->
-                <li><a href="#participate">Participate</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#inspiration">Inspiration</a></li>
-                <li><a href="#contactus">Contact Us</a></li>
+                <li><a href="#participate" uk-scroll>Participate</a></li>
+                <li><a href="#faq" uk-scroll>FAQ</a></li>
+                <li><a href="#inspiration" uk-scroll>Inspiration</a></li>
+                <li><a href="#contactus" uk-scroll>Contact Us</a></li>
 
             </ul>
 
@@ -185,36 +185,42 @@
     		<div class="col-sm-12 container text-center uk-padding">
     			<div class="row uk-margin-medium uk-padding uk-padding-remove-vertical">
     				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-left">
-    					<div class="part-icon-cont">
-	    					<center><span class="part-icon fa fa-calendar"></span></center>
-	    				</div>
-    					<div id="lc-1" class="logo-container uk-margin-medium uk-margin-remove-top">
-    						
-    					</div>
+    					<center>
+                            <div id="lc-1" class="logo-container uk-margin-medium uk-margin-remove-top">
+    						  <!-- <div class="icon-container"> -->
+                                <div class="part-icon-cont text-center"  style="">
+                                    <span class="fa fa-calendar" style="color : #fff; font-size : 40px;z-index: 999;"></span>    
+                                </div>
+                              <!-- </div> -->
+    					    </div>
+                        </center>
     					<div class="logo-info-container">
     						<h4> Mark your dates for 10th - 11th Sept </h4>
     					</div>
     				</div>
     				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-fade">
-    					<div class="part-icon-cont">
-	    					<center><span class="part-icon fa fa-camera-retro"></span></center>
-	    				</div>
+    					<center>
+                            <div id="lc-2" class="logo-container uk-margin-medium uk-margin-remove-top">
+                              <!-- <div class="icon-container"> -->
+                                <div class="part-icon-cont text-center"  style="">
+                                    <span class="fa fa-camera-retro" style="color : #fff; font-size : 40px;z-index: 999;"></span>    
+                                </div>
+                              <!-- </div> -->
+                            </div>
+                        </center>
 
-    					<div id="lc-2" class="logo-container uk-margin-medium uk-margin-remove-top">
-	    					
-    					</div>
     					<div class="logo-info-container">
     						<h4> Thinking big? Think bigger! Come and blow our minds. </h4>
     					</div>
     				</div>
     				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-right">
-    					<div class="part-icon-cont">
-	    					<center><span class="part-icon fa fa-clock-o"></span></center>
-	    				</div>
-
-    					<div id="lc-3" class="logo-container uk-margin-medium uk-margin-remove-top">
-	    					
-    					</div>
+                        <center>
+        					<div id="lc-3" class="logo-container uk-margin-medium uk-margin-remove-top">
+    	    					<div class="part-icon-cont text-center"  style="">
+                                    <span class="fa fa-clock-o" style="color : #fff; font-size : 40px;z-index: 999;"></span>    
+                                </div>
+        					</div>
+                        </center>
     					<div class="logo-info-container">
     						<h4> The 24 hour event will feature mentors, food, games and a lot of fun. </h4>
     					</div>
@@ -224,37 +230,42 @@
 
     			<div class="row uk-padding uk-padding-remove-vertical">
     				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-left">
-    					<div class="part-icon-cont">
-	    					<center><span class="part-icon fa fa-coffee"></span></center>
-	    				</div>
-
-    					<div id="lc-4" class="logo-container uk-margin-medium uk-margin-remove-top">
-	    					
-    					</div>
+    					<center>
+                            <div id="lc-4" class="logo-container uk-margin-medium uk-margin-remove-top">
+                              <!-- <div class="icon-container"> -->
+                                <div class="part-icon-cont text-center"  style="">
+                                    <span class="fa fa-coffee" style="color : #fff; font-size : 40px;z-index: 999;"></span>    
+                                </div>
+                              <!-- </div> -->
+                            </div>
+                        </center>
     					<div class="logo-info-container">
     						<h4> Build and register your team online, along with an abstract about your hack! </h4>
     					</div>
     				</div>
     				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-fade">
-    					<div class="part-icon-cont">
-	    					<center><span class="part-icon fa fa-thumbs-o-up"></span></center>
-	    				</div>
+                        <center>
+        					<div id="lc-5" class="logo-container uk-margin-medium uk-margin-remove-top">
+    	    					<div class="part-icon-cont text-center"  style="">
+                                    <span class="fa fa-thumbs-o-up" style="color : #fff; font-size : 40px;z-index: 999;"></span>    
+                                </div>
+        					</div>
+                        </center>
 
-    					<div id="lc-5" class="logo-container uk-margin-medium uk-margin-remove-top">
-	    					
-    					</div>
     					<div class="logo-info-container">
     						<h4> Teams with the best hack ideas get shortlisted. </h4>
     					</div>
     				</div>
     				<div class="col-sm-4" uk-scrollspy="cls:uk-animation-slide-right">
-    					<div class="part-icon-cont">
-	    					<center><span class="part-icon fa fa-ticket"></span></center>
-	    				</div>
-
-    					<div id="lc-6" class="logo-container uk-margin-medium uk-margin-remove-top">
-	    					
-    					</div>
+    					<center>
+                            <div id="lc-6" class="logo-container uk-margin-medium uk-margin-remove-top">
+                              <!-- <div class="icon-container"> -->
+                                <div class="part-icon-cont text-center"  style="">
+                                    <span class="fa fa-ticket" style="color : #fff; font-size : 40px;z-index: 999;"></span>    
+                                </div>
+                              <!-- </div> -->
+                            </div>
+                        </center>
     					<div class="logo-info-container">
     						<h4> Shortlisted teams collect tickets and gear up for the event! </h4>
     					</div>
@@ -558,14 +569,14 @@ Everybody gets 24 hours to work on their hacks. Including inauguration and prize
         <div class="row">
 
             <div class="col-sm-6 col-sm-offset-3">
-                <div id="map" style="height: 400px; width: 100%;">
+                <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJwb4iy7xsrjsRdl79p7cwrUs&key=AIzaSyDpCzZMqCELL53PLmHZ57-jAH8NGnZ8jPA" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
                     <script>
                       function initMap() {
-                        var uluru = {lat: -25.363, lng: 131.044};
+                        var uluru = {lat: 12.8639793, lng: 77.6629962};
                         var map = new google.maps.Map(document.getElementById('map'), {
-                          zoom: 4,
+                          zoom: 15,
                           center: uluru,
                           mapTypeId : google.maps.MapTypeId.SATELLITE
                         });
@@ -585,7 +596,7 @@ Everybody gets 24 hours to work on their hacks. Including inauguration and prize
 
     <!-- </div> -->
 
-<div id="modal-full" class="uk-modal-full" uk-modal style="z-index: 999;">
+<div id="modal-full" class="uk-modal-full" uk-modal style="z-index: 1002;">
 <div class="uk-modal-dialog">
         <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
         <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
@@ -687,57 +698,57 @@ Everybody gets 24 hours to work on their hacks. Including inauguration and prize
 
 
 
-	  var draw1 = SVG('lc-1').size(180, 180);
-	  var draw2 = SVG('lc-2').size(180, 180);
-	  var draw3 = SVG('lc-3').size(180, 180);
-	  var draw4 = SVG('lc-4').size(180, 180);
-	  var draw5 = SVG('lc-5').size(180, 180);
-	  var draw6 = SVG('lc-6').size(180, 180);
+	  // var draw1 = SVG('lc-1').size(180, 180);
+	  // var draw2 = SVG('lc-2').size(180, 180);
+	  // var draw3 = SVG('lc-3').size(180, 180);
+	  // var draw4 = SVG('lc-4').size(180, 180);
+	  // var draw5 = SVG('lc-5').size(180, 180);
+	  // var draw6 = SVG('lc-6').size(180, 180);
 	  // var rect1 = draw1.circle(100).move(10, 10);
-	  var rect1 = draw1.polygon('160.0,80.0 120.0,149.282 40.0,149.282 0.0,80.0 40.0,10.718 120.0,10.718').move(10,10);
-	  var rect2 = draw2.circle(150).move(10, 10);
-	  var rect3 = draw3.polygon('160.0,80.0 120.0,149.282 40.0,149.282 0.0,80.0 40.0,10.718 120.0,10.718').move(10,10);
-	  var rect4 = draw4.circle(150).move(10, 10);
-	  var rect5 = draw5.polygon('160.0,80.0 120.0,149.282 40.0,149.282 0.0,80.0 40.0,10.718 120.0,10.718').move(10,10);
-	  var rect6 = draw6.circle(150).move(10, 10);
-	  rect1.attr({
-	  	fill : "none",
-	  	stroke : "#2d9687",
-	  	'stroke-width' : 8
-	  });
+	  // var rect1 = draw1.polygon('160.0,80.0 120.0,149.282 40.0,149.282 0.0,80.0 40.0,10.718 120.0,10.718').move(10,10);
+	  // var rect2 = draw2.circle(150).move(10, 10);
+	  // var rect3 = draw3.polygon('160.0,80.0 120.0,149.282 40.0,149.282 0.0,80.0 40.0,10.718 120.0,10.718').move(10,10);
+	  // var rect4 = draw4.circle(150).move(10, 10);
+	  // var rect5 = draw5.polygon('160.0,80.0 120.0,149.282 40.0,149.282 0.0,80.0 40.0,10.718 120.0,10.718').move(10,10);
+	  // var rect6 = draw6.circle(150).move(10, 10);
+	  // rect1.attr({
+	  // 	fill : "none",
+	  // 	stroke : "#2d9687",
+	  // 	'stroke-width' : 8
+	  // });
 
 
-	  rect2.attr({
-	  	fill : "#2d9687",
-	  	stroke : "#2d9687",
-	  	'stroke-width' : 8
-	  });
-	  rect3.attr({
-	  	fill : "none",
-	  	stroke : "#2d9687",
-	  	'stroke-width' : 8
-	  });
-	  rect4.attr({
-	  	fill : "#2d9687",
-	  	stroke : "#2d9687",
-	  	'stroke-width' : 8
-	  });
-	  rect5.attr({
-	  	fill : "none",
-	  	stroke : "#2d9687",
-	  	'stroke-width' : 8
-	  });
-	  rect6.attr({
-	  	fill : "#2d9687",
-	  	stroke : "#2d9687",
-	  	'stroke-width' : 8
-	  });
+	  // rect2.attr({
+	  // 	fill : "#2d9687",
+	  // 	stroke : "#2d9687",
+	  // 	'stroke-width' : 8
+	  // });
+	  // rect3.attr({
+	  // 	fill : "none",
+	  // 	stroke : "#2d9687",
+	  // 	'stroke-width' : 8
+	  // });
+	  // rect4.attr({
+	  // 	fill : "#2d9687",
+	  // 	stroke : "#2d9687",
+	  // 	'stroke-width' : 8
+	  // });
+	  // rect5.attr({
+	  // 	fill : "none",
+	  // 	stroke : "#2d9687",
+	  // 	'stroke-width' : 8
+	  // });
+	  // rect6.attr({
+	  // 	fill : "#2d9687",
+	  // 	stroke : "#2d9687",
+	  // 	'stroke-width' : 8
+	  // });
 
-	  var text1 = draw1.text("\uf005");
-	  text1.font({
-	  	family : "FontAwesome",
-	  	size : 144
-	  });
+	  // var text1 = draw1.text("\uf005");
+	  // text1.font({
+	  // 	family : "FontAwesome",
+	  // 	size : 144
+	  // });
 
 	</script>
 	<script src="js/particles.js"></script>
