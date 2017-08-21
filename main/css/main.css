@@ -4,9 +4,9 @@ html{
 body{
 	overflow-x: hidden;
 	background-color: #000 !important;
-	animation: bg-transitions 5s infinite alternate;
+	/*animation: bg-transitions 5s infinite alternate;
   -moz-animation: bg-transitions 5s infinite alternate;
-  -webkit-animation: bg-transitions 5s infinite alternate;
+  -webkit-animation: bg-transitions 5s infinite alternate;*/
 	/*height: 120vh;*/
 }
 
