@@ -270,20 +270,14 @@ clip-path: polygon(0% 15%, 12% 10%, 15% 0%, 85% 0%, 89% 11%, 100% 15%, 100% 85%,
 
 }
 
-.clip-hexagon>.uk-overlay-default{
+.image-container>.uk-overlay-default{
 	display: none;
-	position: absolute;
-	top:5px;
-	left: 24px;
-	width: 211px;
-	height: 210px;
-	background-color: #fff;
+	background-color: #2d9687;
 	opacity: 0.5;
-	-webkit-clip-path: polygon(0% 15%, 12% 10%, 15% 0%, 85% 0%, 89% 11%, 100% 15%, 100% 85%, 90% 88%, 85% 100%, 15% 100%, 12% 89%, 0% 85%);
-	clip-path: polygon(0% 15%, 12% 10%, 15% 0%, 85% 0%, 89% 11%, 100% 15%, 100% 85%, 90% 88%, 85% 100%, 15% 100%, 12% 89%, 0% 85%);
+	
 
 }
-.clip-hexagon span{
+.image-container span{
 	z-index: 999;
 	color : #000;
 	font-weight: bold;
@@ -305,3 +299,146 @@ clip-path: polygon(0% 15%, 12% 10%, 15% 0%, 85% 0%, 89% 11%, 100% 15%, 100% 85%,
 
 
 
+
+
+.speaker-container{
+	padding:20px 20px !important;
+	/*height: 100% !important;*/
+	
+background: transparent;
+}
+
+.product-front{
+	-webkit-box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.56);
+-moz-box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.56);
+box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.56);
+}
+.speaker-container .image-container{
+	padding: 0px !important;
+}
+.image-overlay{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width: 100%;
+	background: transparent;
+}
+.view-details{	
+	background:#fff;
+	color:rgb(230, 43, 30) !important;
+	text-decoration: none;
+	position:absolute;
+	top:112px;
+	left:50%;
+	margin-left:-85px;	
+	border:2px solid #fff;
+	color:#fff;
+	font-size:19px;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:700;
+	padding:10px 0;
+	width:172px;	
+	opacity:0;
+	-webkit-transition: all 200ms ease-out; 
+       -moz-transition: all 200ms ease-out; 
+         -o-transition: all 200ms ease-out; 
+            transition: all 200ms ease-out; 
+}
+.view-details:hover{	
+	background:#fff;
+	color:#48cfad !important;
+	cursor:pointer;
+
+}
+
+.product-front.animate .view-details{
+	opacity:1;
+	width:152px;
+	font-size:15px;
+	margin-left:-75px;
+	top:115px;
+	-webkit-transition: all 200ms ease-out; 
+       -moz-transition: all 200ms ease-out; 
+         -o-transition: all 200ms ease-out; 
+            transition: all 200ms ease-out; 		
+}
+
+.stats-container{
+	padding: 10px;
+	min-height: 150px;
+}
+.stats-container span{
+	font-size: 25px;
+	font-weight: 300;
+}
+
+.product-front.animate .image-overlay{
+	background-color: rgba(230, 43, 30, 0.75);
+	transition: all 0.3s;
+}
+.product-front.animate .view-details{
+	display: block;
+
+}
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  top: 20px;
+  width: auto;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.mfp-close{
+	z-index: 999;
+	color: #fff !important;
+}
+
+
+@media only screen and (max-width: 768px){
+	.speaker-container{
+		padding : 20px !important;
+	}
+	.read-more{
+		margin-top:20px;
+		display: block !important;
+		font-size: 15px;
+	}
+}
