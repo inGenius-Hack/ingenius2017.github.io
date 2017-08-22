@@ -38,6 +38,7 @@ box-shadow: 2px -1px 26px 1px rgba(250,255,255,1);
 
 .section {
 	background : transparent !important;
+	z-index: 999;
 }
 
 #home{
@@ -69,21 +70,38 @@ box-shadow: 2px -1px 26px 1px rgba(250,255,255,1);
 	z-index: +1;
 }
 
-#lc-1, #lc-3, #lc-5{
-	height: 200px;
-	width: 180px;
+#lc-2, #lc-4{
+	height: 180px;
+	width: 160px;
 	background-color: #2d9687;
 	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
-#lc-2, #lc-4, #lc-6{
-	height: 200px;
-	width: 200px;
+#lc-1, #lc-3, #lc-5{
+	height: 180px;
+	width: 180px;
 	background-color: transparent;
 	border : 4px solid #2d9687;
 	border-radius: 50%;
+	z-index: 900;
 }
+
+#lc-6{
+	height: 170px;
+	width: 150px;
+	background-color: #2d9687;
+	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+/*#lc-6{
+	height: 180px;
+	width: 180px;
+	background-color: transparent;
+	border : 4px solid #2d9687;
+	border-radius: 50%;
+	z-index: 900;
+}*/
 @media (max-width: 760px) {
 /*
 	#lc-1 > div{
@@ -115,7 +133,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .main-content{
-	letter-spacing: 2px; font-weight: 300 !important; font-size: 24px; opacity: 0.9;
+	letter-spacing: 2px; font-weight: 300 !important; font-size: 22px; opacity: 0.9;
 	font-family: 'Open Sans', sans-serif;
 }
 svg text{
@@ -129,6 +147,14 @@ svg text{
 	position: absolute; 
 	left:0; 
 	top: 80px;
+	width:100%;
+	font-size:38px !important;
+}
+#lc-6-icon-cont{
+	color:#fff; 
+	position: absolute; 
+	left:0; 
+	top: 70px;
 	width:100%;
 	font-size:38px !important;
 }
