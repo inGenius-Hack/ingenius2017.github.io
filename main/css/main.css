@@ -99,14 +99,14 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 	0% {background-color: #0D0620;}
 	20% {background-color: #1C0C2B;}
 	40% {background-color: #041024;}
-	80% {background-color: #042418;}
+	/*80% {background-color: #042418;}*/
 	100% {background-color: #050309;}
 }
 @keyframes bg-transitions{
 	0% {background-color: #0D0620;}
 	20% {background-color: #1C0C2B;}
 	40% {background-color: #041024;}
-	80% {background-color: #042418;}
+	/*80% {background-color: #042418;}*/
 	100% {background-color: #050309;}
 }
 
@@ -470,4 +470,40 @@ box-shadow: 0px 2px 19px 0px rgba(0,0,0,0.56);
 		display: block !important;
 		font-size: 15px;
 	}
+	.modal-background{
+		display: none;
+	}
+}
+
+.hack-modal-title{
+	font-family: 'Open Sans';
+	font-weight: lighter;
+	font-weight: 300 !important;
+}
+.hack-modal-by{
+	z-index: 999;
+	color: #000;
+	font-size: 15px;
+}
+.hack-modal-info{
+	z-index: 999; color: #000;
+	font-weight: lighter;
+	font-family: 'Open Sans';
+}
+
+
+.footer{
+	position: relative;
+}
+
+.social-links span{
+	font-size: 32px;
+	margin : 0px 20px; 
+	color: #fff !important;
+}
+.made-with{
+	font-family: 'Inconsolata', monospace;
+	font-size: 14px;
+	opacity: 0.8;
+	color : #fff;
 }
