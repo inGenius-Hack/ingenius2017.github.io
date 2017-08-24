@@ -163,6 +163,10 @@ iframe{
 	-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 64% 75%, 51% 100%, 37% 76%, 0% 75%);
 clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 64% 75%, 51% 100%, 37% 76%, 0% 75%);
 }
+
+.form-div{
+	 width: 80%;
+}
 .input-feild{
 	background-color: transparent !important;
 	border : 2px solid #2d9687 !important;
@@ -199,6 +203,9 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 64% 75%, 51% 100%, 37% 76%, 0% 75%)
 	display : none;
 }
 
+.random-filler-space{
+	margin-left: 18px;
+}
 @media (max-width: 760px) {
 	/*.part-icon-cont{
 		left:73px;
@@ -212,6 +219,13 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 64% 75%, 51% 100%, 37% 76%, 0% 75%)
 	}
 	#menu-icon{
 		display: block;
+	}
+
+	.form-div{
+		width: 95%;
+	}
+	.random-filler-space{
+		margin: 0px;
 	}
 }
 
