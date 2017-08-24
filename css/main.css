@@ -171,6 +171,7 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 64% 75%, 51% 100%, 37% 76%, 0% 75%)
 	font-size : 18px !important;
 	/*padding-top: 1px; !important;*/
 	letter-spacing: 2px !important;
+	width: 100%;
 }
 #honeycomb svg polygon{
 	z-index: 999;
